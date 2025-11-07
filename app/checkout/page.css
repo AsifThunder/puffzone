@@ -1,0 +1,120 @@
+/* ====== CHECKOUT PAGE ====== */
+body {
+      background: radial-gradient(circle at 20% 10%, #0d0d0d, #000);
+}
+
+.checkout-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #0d0d0d, #000);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* Puff Zone watermark behind */
+.checkout-page::before {
+  content: "PUFF ZONE";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  letter-spacing: 1vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card container */
+.checkout-card {
+  background: rgba(20, 30, 45, 0.8);
+  border: 1px solid rgba(0, 195, 255, 0.1);
+  border-radius: 18px;
+  padding: 50px 60px;
+  width: 420px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Titles */
+.checkout-card h1 {
+  font-size: 2rem;
+  color: #00c3ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(0, 195, 255, 0.3);
+}
+.checkout-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.checkout-card p {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.checkout-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-card input {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(0, 195, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px;
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.checkout-card input:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.4);
+}
+
+/* Confirm Order Button */
+.checkout-card button {
+  background: linear-gradient(90deg, #00c3ff, #0077ff);
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 195, 255, 0.2);
+}
+
+.checkout-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .checkout-card {
+    padding: 35px 25px;
+  }
+  .checkout-card h1 {
+    font-size: 1.6rem;
+  }
+}
