@@ -1121,3 +1121,10 @@ button:active {
   color: #00c6ff;
   font-weight: 600;
 }
+
+@media (max-width: 450px) {
+  .hero img:hover {
+    transform: scale(0.9);
+    box-shadow: 1px;
+  }
+}
