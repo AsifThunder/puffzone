@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import "./globals.css";
+import Image from "next/image";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -49,24 +50,26 @@ export default function Home() {
 
   return (
     <main>
-      {/* HEADER */}
-      <header className="navbar">
-        <div className="logo">PUFF <span>ZONE</span></div>
+        <header className="navbar">
+         <div className="logo">
+  <img src="/Logos.png" alt="Puff Zone Logo" />
+</div>
 
-        <div className="search-area">
-          <input
-            type="text"
-            placeholder="Search vapes, brands..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button className="search-button">Search</button>
-        </div>
 
-        <nav className="nav-links">
-          <a href="#">Home</a>
-          <a onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}>Products</a>
-          <a onClick={() => {
+          <div className="search-area">
+            <input
+          type="text"
+          placeholder="Search vapes, brands..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button className="search-button">Search</button>
+          </div>
+
+          <nav className="nav-links">
+            <a href="#">Home</a>
+            <a onClick={() => document.querySelector("#products")?.scrollIntoView({ behavior: "smooth" })}>Products</a>
+            <a onClick={() => {
             const hero = document.querySelector(".hero-single");
             hero?.classList.add("glow");
             setTimeout(() => hero?.classList.remove("glow"), 500);
@@ -191,13 +194,13 @@ export default function Home() {
       <h3>Contact</h3>
       <p>📍 Dhaka, Bangladesh</p>
       <div className="socials">
-        <a href="https://www.facebook.com/puffzone" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61568116922387" target="_blank">Facebook</a>
       </div>
     </div>
   </div>
 
   <div className="footer-bottom">
-    <p>© {new Date().getFullYear()} Puff Zone — Designed by <span className="credit">onlyone_asif</span></p>
+    <p>© {new Date().getFullYear()} Puff Zone — Designed by <span className="credit"><a href="https://www.instagram.com/onlyone_asif/">onlyone_asif</a></span></p>
   </div>
 </footer>
 

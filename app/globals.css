@@ -1128,3 +1128,10 @@ button:active {
     box-shadow: 1px;
   }
 }
+
+
+.logo img{
+
+  height: 90px;
+    border-radius: 53px;
+}
