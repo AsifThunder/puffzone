@@ -8,10 +8,8 @@ export default function ProductPage() {
   const { slug } = useParams();
   const router = useRouter();
 
-  const product = products.find(
-    (item) =>
-      item.name.toLowerCase() === decodeURIComponent(slug).toLowerCase()
-  );
+ const product = products.find((item) => item.slug === slug);
+
 
   if (!product)
     return (
