@@ -8,8 +8,7 @@ export default function ProductPage() {
   const { slug } = useParams();
   const router = useRouter();
 
- const product = products.find((item) => item.slug === slug);
-
+  const product = products.find((item) => item.slug === slug);
 
   if (!product)
     return (
@@ -34,7 +33,7 @@ export default function ProductPage() {
         <div className="product-right">
           <h1 className="product-title">{product.name}</h1>
           <p className="product-short">{product.desc}</p>
-          <p className="product-price">৳650</p>
+          <p className="product-price">৳{product.price}</p>
           <p className={`product-stock ${product.inStock ? "in" : "out"}`}>
             {product.inStock ? "In Stock ✅" : "Out of Stock ❌"}
           </p>
@@ -51,7 +50,7 @@ export default function ProductPage() {
                 router.push(
                   `/checkout?product=${encodeURIComponent(product.name)}&desc=${encodeURIComponent(
                     product.desc
-                  )}&price=650`
+                  )}&price=${product.price}`
                 )
               }
             >
@@ -61,7 +60,6 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* ✅ Detailed Description Section */}
       <section className="product-details">
         <h2>Product Description</h2>
         <p>
