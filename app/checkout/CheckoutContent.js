@@ -9,10 +9,12 @@ export default function CheckoutContent() {
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [delivery, setDelivery] = useState(80); // default inside Dhaka
 
   useEffect(() => {
     const product = params.get("product");
     const priceParam = params.get("price");
+
     if (product) setProductName(decodeURIComponent(product));
     if (priceParam) setPrice(Number(priceParam));
     else setPrice(650);
@@ -28,18 +30,21 @@ export default function CheckoutContent() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // 🔥 calculate price including delivery
+  const totalPrice = price * quantity + delivery;
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const whatsappNumber = "8801857624441";
-    const totalPrice = price * quantity;
 
     const message = `
 📦 *New Order from Puff Zone*
-🧃 *Product:* ${productName || "Not specified"}
+🧃 *Product:* ${productName}
 💰 *Unit Price:* ৳${price}
 🔢 *Quantity:* ${quantity}
-💵 *Total:* ৳${totalPrice}
+🚚 *Delivery Charge:* ৳${delivery}
+💵 *Total Payable:* ৳${totalPrice}
 
 👤 *Name:* ${formData.name}
 🏠 *Address:* ${formData.address}
@@ -57,9 +62,14 @@ export default function CheckoutContent() {
       <div className="checkout-card">
         <h1>Checkout</h1>
         <h2>{productName || "Product not found"}</h2>
+
         <p>
-          Price: ৳{price} <br /> Quantity: {quantity} <br />
-          <strong>Total: ৳{price * quantity}</strong>
+          <strong>Price:</strong> ৳{price} <br />
+          <strong>Quantity:</strong> {quantity} <br />
+          <strong>Delivery:</strong> ৳{delivery} <br />
+          <strong style={{ color: "#00c3ff", fontSize: "1.2rem" }}>
+            Total: ৳{totalPrice}
+          </strong>
         </p>
 
         <form onSubmit={handleSubmit}>
@@ -71,14 +81,16 @@ export default function CheckoutContent() {
             onChange={handleChange}
             required
           />
+
           <input
             type="text"
             name="address"
-            placeholder="Address"
+            placeholder="Full Address (Area, House No, etc)"
             value={formData.address}
             onChange={handleChange}
             required
           />
+
           <input
             type="tel"
             name="phone"
@@ -87,15 +99,27 @@ export default function CheckoutContent() {
             onChange={handleChange}
             required
           />
+
+          {/* 🔥 Quantity */}
           <input
             type="number"
             name="quantity"
             min="1"
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
-            placeholder="Quantity"
             required
           />
+
+          {/* 🔥 DELIVERY SELECTION */}
+          <select
+            className="delivery-select"
+            value={delivery}
+            onChange={(e) => setDelivery(Number(e.target.value))}
+          >
+            <option value={80}>Inside Dhaka – ৳80</option>
+            <option value={120}>Outside Dhaka – ৳120</option>
+          </select>
+
           <button type="submit">Confirm Order</button>
         </form>
       </div>

@@ -119,3 +119,116 @@ body {
   }
 }
 
+/* ====== CHECKOUT PAGE ====== */
+body {
+  background: radial-gradient(circle at 20% 10%, #0d0d0d, #000);
+}
+
+.checkout-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #0d0d0d, #000);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+/* Puff Zone watermark */
+.checkout-page::before {
+  content: "PUFF ZONE";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14vw;
+  opacity: 0.03;
+  font-weight: 900;
+  letter-spacing: 1vw;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Card Box */
+.checkout-card {
+  background: rgba(25, 35, 55, 0.85);
+  border: 1px solid rgba(0, 195, 255, 0.15);
+  border-radius: 18px;
+  padding: 50px 45px;
+  width: 420px;
+  max-width: 92%;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+/* Titles */
+.checkout-card h1 {
+  font-size: 2rem;
+  color: #00c3ff;
+  text-shadow: 0 0 18px rgba(0, 195, 255, 0.4);
+}
+.checkout-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.checkout-card p {
+  color: #b7c0cc;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.checkout-card input,
+.delivery-select {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(0, 195, 255, 0.2);
+  border-radius: 10px;
+  padding: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.checkout-card input:focus,
+.delivery-select:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+}
+
+/* Delivery dropdown */
+.delivery-select {
+  appearance: none;
+  cursor: pointer;
+  margin-top: 5px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* Button */
+.checkout-card button {
+  background: linear-gradient(90deg, #00c3ff, #0077ff);
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.3);
+}
+
+.checkout-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.6);
+}
+
+@media (max-width: 500px) {
+  .checkout-card {
+    padding: 35px 25px;
+  }
+}
