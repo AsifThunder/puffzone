@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* VLOTBAR */}
           <section className="products">
-            <h2>Vlotbar</h2>
+            <h2>Voltbar</h2>
             <div className="product-grid">
               {vlotbar.map((item, i) => (
                 <Link href={`/product/${encodeURIComponent(item.slug)}`} key={i}>
@@ -169,7 +169,7 @@ export default function Home() {
 
           {/* THAT·THAT */}
           <section className="products">
-            <h2>That·That</h2>
+            <h2>That·That vapes</h2>
             <div className="product-grid">
               {thatVapes.map((item, i) => (
                 <Link href={`/product/${encodeURIComponent(item.slug)}`} key={i}>
