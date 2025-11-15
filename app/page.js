@@ -25,7 +25,7 @@ export default function Home() {
     { img: "/Watermelon mango voltbar.png", name: "Watermelon Mango Voltbar", slug: "watermelon-mango-voltbar", desc: "Sweet mango & watermelon blend with an icy finish.", price: 1300, inStock: true },
     { img: "/watermelon (1).png", name: "Watermelon Ice", slug: "watermelon-ice-voltbar", desc: "Sweet watermelon with cooling freshness.", price: 1300, inStock: true },
     { img: "/Mango bubblegum.png", name: "Mango Bubblegum", slug: "mango-bubblegum-voltbar", desc: "Juicy mango blended with bubblegum.", price: 1300, inStock: true },
-    { img: "/4.png", name: "Blueberry Raspberry", slug: "blueberry-raspberry-voltbar", desc: "Blueberry meets tangy raspberry punch.", price: 1300, inStock: true },
+   { img: "/48.png", name: "Watermelon Lychee", slug: "watermelon-lychee-voltbar", desc: "Juicy watermelon blended with sweet exotic lychee.", price: 1300, inStock: true },
     { img: "/hanwair mango vlotbar.png", name: "Hawaiian Mango", slug: "hawaiian-mango-voltbar", desc: "Tropical mango with an icy kick.", price: 1300, inStock: true },
     { img: "/6.png", name: "Strawberry Ice", slug: "strawberry-ice-voltbar", desc: "Fresh strawberry with cool exhale.", price: 1300, inStock: true },
     { img: "/7.png", name: "Honeydew Ice", slug: "honeydew-ice-voltbar", desc: "Smooth honeydew with a cold finish.", price: 1300, inStock: true },

@@ -30,7 +30,8 @@ const vlotbar = [
 
   { img: "/Mango bubblegum.png", name: "Mango Bubblegum", slug: "mango-bubblegum-voltbar", desc: "Juicy mango blend with bubblegum finish.", price: 1300, inStock: true },
 
-  { img: "/4.png", name: "Blueberry Raspberry", slug: "blueberry-raspberry-voltbar", desc: "Ripe blueberry meets tangy raspberry punch.", price: 1300, inStock: true },
+ { img: "/48.png", name: "Watermelon Lychee", slug: "watermelon-lychee-voltbar", desc: "Juicy watermelon blended with sweet exotic lychee.", price: 1300, inStock: true },
+
 
   { img: "/hanwair mango vlotbar.png", name: "Hawaiian Mango", slug: "hawaiian-mango-voltbar", desc: "Tropical mango with an icy kick.", price: 1300, inStock: true },
 
